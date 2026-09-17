@@ -30,7 +30,7 @@ def llm_response(prompt: str, model: str = "deepseek-chat", temperature: float =
 
     headers = {
         'Content-Type': "application/json",
-        'Authorization': "Bearer ***REMOVED***"
+        'Authorization': f"Bearer {os.environ.get('INFINI_API_KEY', '')}"
     }
 
         # 尝试发送请求
