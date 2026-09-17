@@ -376,7 +376,7 @@ cs245-track-a/
 # Edit run_evaluation.py configuration in file
     DATA_DIR = "Dataset"  
     TASK_SET = "yelp"     # yelp / amazon / goodreads
-    API_KEY = "***REMOVED***"  # 👈  API Key
+    API_KEY = "your-deepseek-api-key"  # or set DEEPSEEK_API_KEY
     
     #
     NUM_TASKS = 30 
