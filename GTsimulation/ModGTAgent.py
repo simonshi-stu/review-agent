@@ -7,6 +7,7 @@ from openai import OpenAI
 import tiktoken
 import json 
 import requests
+import os
 
 def count_tokens(text: str) -> int:
     enc = tiktoken.get_encoding("cl100k_base")  
@@ -55,7 +56,7 @@ def llm_response(prompt: str, model: str = "deepseek-chat", temperature: float =
 
     headers = {
         'Content-Type': "application/json",
-        'Authorization': "Bearer ***REMOVED***"
+        'Authorization': f"Bearer {os.environ.get('INFINI_API_KEY', '')}"
     }
 
     conn.request("POST", "/maas/v1/chat/completions", str(payload), headers)
