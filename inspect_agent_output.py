@@ -5,6 +5,7 @@ Simple agent output viewer - displays generated content without comparison
 Focuses on viewing what the agent produces for individual tasks
 """
 
+import os
 import sys
 import time
 from websocietysimulator import Simulator
@@ -129,7 +130,7 @@ def simple_inspect():
     # Configuration
     DATA_DIR = "Dataset"
     TASK_SET = "yelp"
-    API_KEY = "***REMOVED***"
+    API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
     
     # Input task index
     try:
