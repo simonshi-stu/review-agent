@@ -469,7 +469,7 @@ def main():
     
     DATA_DIR = "Dataset"
     TASK_SET = "yelp"
-    API_KEY = "***REMOVED***"  # 👈 改成你的 API Key
+    API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")  # set DEEPSEEK_API_KEY before running
     NUM_TASKS = 10  # 每个实验的任务数（建议 100-200）
     
     # ============================================
